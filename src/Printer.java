@@ -1,5 +1,8 @@
 public class Printer {
 
+    private Printer() {
+    }
+
     public static void printBookProperties(Book book) {
         System.out.println("Свойства книги " + book.getName());
         System.out.println(".getName() = " + book.getName());
