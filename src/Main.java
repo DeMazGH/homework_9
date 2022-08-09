@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        Book muMu = new Book("Mu-Mu", "Ivan Turgenev", 2000);
+        Book mumu = new Book("Mumu", "Ivan Turgenev", 2000);
         Book dogHeart = new Book("Dog's heart", "Mikhail Bulgakov", 2011);
         Author bulgakov = new Author("Mikhail", "Bulgakov");
         Author turgenev = new Author("Ivan", "Turgenev");
@@ -9,21 +9,21 @@ public class Main {
 
         Library library = new Library(10);
 
-        library.addBook(muMu);
+        library.addBook(mumu);
         library.addBook(dogHeart);
 
         library.printCharactersOfAllBooks();
-        library.printBookInfo("Mu-mu");
+        library.printBookInfo("Mumu");
 
-        library.changePublicationYear("mu-mu", 2007);
-        library.printBookInfo("Mu-mu");
+        library.changePublicationYear("mumu", 2007);
+        library.printBookInfo("Mumu");
 
         //Проверка свойств объектов, геттеров и сеттеров
         System.out.println();
-        Printer.printBookProperties(muMu);
+        Printer.printBookProperties(mumu);
 
-        muMu.setPublicationYear(2022);
-        System.out.println("muMu.getPublicationYear() = " + muMu.getPublicationYear());
+        mumu.setPublicationYear(2022);
+        System.out.println("mumu.getPublicationYear() = " + mumu.getPublicationYear());
         System.out.println();
 
         Printer.printBookProperties(dogHeart);
