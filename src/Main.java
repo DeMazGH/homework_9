@@ -5,6 +5,8 @@ public class Main {
         Author bulgakov = new Author("Mikhail", "Bulgakov");
         Author turgenev = new Author("Ivan", "Turgenev");
 
+        //Условия заданий повышенной сложности - https://skypro.slack.com/archives/C02R4PPHQGM/p1659523312899989
+
         Library library = new Library(10);
 
         library.addBook(muMu);
