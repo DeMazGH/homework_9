@@ -5,17 +5,45 @@ public class Main {
         Author bulgakov = new Author("Mikhail", "Bulgakov");
         Author turgenev = new Author("Ivan", "Turgenev");
 
-        Printer.printBookProperties(muMu);
+        Book[] allBooks = new Book[10];
+        addBook(muMu, allBooks);
+        addBook(dogHeart, allBooks);
 
-        muMu.setPublicationYear(2022);
-        System.out.println("muMu.getPublicationYear() = " + muMu.getPublicationYear());
-        System.out.println();
+        printCharactersOfAllBooks(allBooks);
 
-        Printer.printBookProperties(dogHeart);
+//        String aaa = bulgakov.getFirstName() + " " +  bulgakov.getLastName();
+//        System.out.println(aaa);
 
-        Printer.printAuthorProperties(turgenev);
+//        Printer.printBookProperties(muMu);
+//
+//        muMu.setPublicationYear(2022);
+//        System.out.println("muMu.getPublicationYear() = " + muMu.getPublicationYear());
+//        System.out.println();
+//
+//        Printer.printBookProperties(dogHeart);
+//
+//        Printer.printAuthorProperties(turgenev);
+//
+//        Printer.printAuthorProperties(bulgakov);
+    }
 
-        Printer.printAuthorProperties(bulgakov);
+    public static void addBook(Book newBook, Book[] allBooks) {
+        for (int i = 0; i < allBooks.length; i++) {
+            if (allBooks[i] == null) {
+                allBooks[i] = newBook;
+                break;
+            }
+        }
+    }
+
+    public static void printCharactersOfAllBooks(Book[] allBooks) {
+        for (int i = 0; i < allBooks.length; i++) {
+            if (allBooks[i] != null) {
+                System.out.println(allBooks[i].getAuthor() + ": " + allBooks[i].getName() + ": " + allBooks[i].getPublicationYear());
+            } else {
+                break;
+            }
+        }
     }
 
 }
