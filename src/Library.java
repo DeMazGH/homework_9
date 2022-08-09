@@ -7,6 +7,9 @@ public class Library {
     }
 
     public void addBook(Book newBook) {
+        if (allBooks[allBooks.length - 1] != null) {
+            throw new RuntimeException("Библиотека переполнена");
+        }
         for (int i = 0; i < allBooks.length; i++) {
             if (allBooks[i] == null) {
                 allBooks[i] = newBook;
@@ -18,7 +21,7 @@ public class Library {
     public void printCharactersOfAllBooks() {
         for (Book book : allBooks) {
             if (book != null) {
-                System.out.println(book.getAuthor() + ": " + book.getName() + ": " + book.getPublicationYear());
+                System.out.println(book.getAuthor() + ": " + book.getTitle() + ": " + book.getPublicationYear());
             } else {
                 break;
             }
@@ -30,8 +33,8 @@ public class Library {
             if (book == null) {
                 System.out.println("Book not found.");
                 break;
-            } else if (bookTitle.equalsIgnoreCase(book.getName())) {
-                System.out.println(book.getName() + " by " + book.getAuthor() +
+            } else if (bookTitle.equalsIgnoreCase(book.getTitle())) {
+                System.out.println(book.getTitle() + " by " + book.getAuthor() +
                         " published was " + book.getPublicationYear());
                 break;
             }
@@ -42,7 +45,7 @@ public class Library {
         for (Book allBook : allBooks) {
             if (allBook == null) {
                 break;
-            } else if (bookTitle.equalsIgnoreCase(allBook.getName())) {
+            } else if (bookTitle.equalsIgnoreCase(allBook.getTitle())) {
                 allBook.setPublicationYear(newPublicationYear);
                 break;
             }

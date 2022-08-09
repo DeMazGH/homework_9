@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        Book mumu = new Book("Mumu", "Ivan Turgenev", 2000);
-        Book dogHeart = new Book("Dog's heart", "Mikhail Bulgakov", 2011);
         Author bulgakov = new Author("Mikhail", "Bulgakov");
         Author turgenev = new Author("Ivan", "Turgenev");
+        Book mumu = new Book("Mumu", turgenev, 2000);
+        Book dogHeart = new Book("Dog's heart", bulgakov, 2011);
 
         //Условия заданий повышенной сложности - https://skypro.slack.com/archives/C02R4PPHQGM/p1659523312899989
 
