@@ -20,15 +20,15 @@ public class Main {
 
         //Проверка свойств объектов, геттеров и сеттеров
         System.out.println();
-        Printer.printBookProperties(mumu);
+        System.out.println(mumu);
 
         mumu.setPublicationYear(2022);
         System.out.println("mumu.getPublicationYear() = " + mumu.getPublicationYear());
         System.out.println();
 
-        Printer.printBookProperties(dogHeart);
-        Printer.printAuthorProperties(turgenev);
-        Printer.printAuthorProperties(bulgakov);
+        System.out.println(dogHeart);
+        System.out.println(turgenev);
+        System.out.println(bulgakov);
     }
 
 

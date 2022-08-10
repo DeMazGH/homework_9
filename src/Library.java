@@ -22,18 +22,13 @@ public class Library {
         for (Book book : allBooks) {
             if (book != null) {
                 System.out.println(book.getAuthor() + ": " + book.getTitle() + ": " + book.getPublicationYear());
-            } else {
-                break;
             }
         }
     }
 
     public void printBookInfo(String bookTitle) {
         for (Book book : allBooks) {
-            if (book == null) {
-                System.out.println("Book not found.");
-                break;
-            } else if (bookTitle.equalsIgnoreCase(book.getTitle())) {
+            if (bookTitle.equalsIgnoreCase(book.getTitle())) {
                 System.out.println(book.getTitle() + " by " + book.getAuthor() +
                         " published was " + book.getPublicationYear());
                 break;
