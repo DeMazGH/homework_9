@@ -4,8 +4,7 @@ public class Main {
         Author turgenev = new Author("Ivan", "Turgenev");
         Book mumu = new Book("Mumu", turgenev, 2000);
         Book dogHeart = new Book("Dog's heart", bulgakov, 2011);
-
-        //Условия заданий повышенной сложности - https://skypro.slack.com/archives/C02R4PPHQGM/p1659523312899989
+        Book mumuNewPublication = new Book("Mumu", turgenev, 2022);
 
         Library library = new Library(10);
 
@@ -18,7 +17,6 @@ public class Main {
         library.changePublicationYear("mumu", 2007);
         library.printBookInfo("Mumu");
 
-        //Проверка свойств объектов, геттеров и сеттеров
         System.out.println();
         System.out.println(mumu);
 
@@ -29,6 +27,9 @@ public class Main {
         System.out.println(dogHeart);
         System.out.println(turgenev);
         System.out.println(bulgakov);
+
+        System.out.println(mumu.hashCode() == mumuNewPublication.hashCode());
+        System.out.println(mumu.equals(mumuNewPublication));
     }
 
 
